@@ -26,7 +26,7 @@ services:
       context: ./moodle
       args:
         - MOODLE_VERSION=v4.3.0
-    command: bash ./scripts/fixmoodleowner.sh
+    command: bash /home/fixmoodleowner.sh
     environment:
       - MOODLE_DBTYPE=mariadb
       - MOODLE_DBHOST=db
@@ -45,6 +45,7 @@ services:
       - './container-volumes/moodledata_data:/var/www/moodledata'
       - './container-volumes/phpunitdata_data:/var/www/phpunitdata'
       - '../block_myblockexample:/var/www/html/blocks/myblockexample'
+      - './scripts/fixmoodleowner.sh:/home/fixmoodleowner.sh'
     depends_on:
       - db
 volumes:
