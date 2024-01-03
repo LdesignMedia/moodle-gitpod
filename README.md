@@ -8,8 +8,9 @@ Moodle development environment for gitpod.
 Get started
 ---------------
 
-1. Open gitpod.
-
+1. Fork this repository.
+2. Open it in Gitpod.
+3. Start developing or testing your Moodle project immediately.
 
 Changelog
 ---------------
