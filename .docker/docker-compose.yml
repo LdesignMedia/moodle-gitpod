@@ -26,6 +26,7 @@ services:
       context: ./moodle
       args:
         - MOODLE_VERSION=v4.3.0
+    command: bash ./scripts/fixmoodleowner.sh
     environment:
       - MOODLE_DBTYPE=mariadb
       - MOODLE_DBHOST=db
